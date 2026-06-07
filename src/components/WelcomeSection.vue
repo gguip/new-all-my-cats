@@ -3,7 +3,7 @@ import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import ScrollReveal from './ScrollReveal.vue'
 import AppPhoto from './AppPhoto.vue'
-import { PawPrint, CatStretch } from './Illustrations.vue'
+import { PawPrint, CatStretch } from './Illustrations'
 
 const i18n = useI18n({ useScope: 'global' })
 const features = computed(() => i18n.tm('welcome.features'))
@@ -47,7 +47,7 @@ const featureCls = ['photo--sq', 'photo--wide', 'photo--wide']
         <ScrollReveal v-for="(f, i) in features" :key="i">
           <div class="feature">
             <div class="feature__label">{{ f.label }}</div>
-            <AppPhoto :cls="featureCls[i]" :label="f.tag" />
+            <AppPhoto :cls="featureCls[i] ?? ''" :label="f.tag" />
           </div>
         </ScrollReveal>
       </div>

@@ -2,7 +2,7 @@
 import { useI18n } from 'vue-i18n'
 import ScrollReveal from './ScrollReveal.vue'
 import CatCard from './CatCard.vue'
-import { PawPrint } from './Illustrations.vue'
+import { PawPrint } from './Illustrations'
 import { CATS, ATTRS } from 'src/data/cats'
 
 const { t } = useI18n()

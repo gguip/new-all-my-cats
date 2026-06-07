@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import BaseButton from './BaseButton.vue'
-import { PawPad, PawPrint, CatStretch } from './Illustrations.vue'
+import { PawPad, PawPrint, CatStretch } from './Illustrations'
 
 const { t } = useI18n()
 

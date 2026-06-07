@@ -1,4 +1,3 @@
-<script lang="ts">
 import { defineComponent, h } from 'vue'
 
 export const LogoBlob = defineComponent({
@@ -126,4 +125,3 @@ export const IconTiktok = defineComponent({
       ])
   },
 })
-</script>

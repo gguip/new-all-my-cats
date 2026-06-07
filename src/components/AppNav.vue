@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useNavScroll } from 'src/composables/useNavScroll'
-import { LogoBlob } from './Illustrations.vue'
+import { LogoBlob } from './Illustrations'
 
 const { t, locale } = useI18n()
 const { scrolled } = useNavScroll()

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import ScrollReveal from './ScrollReveal.vue'
-import { LogoBlob, PawPrint, IconFacebook, IconInstagram, IconTiktok } from './Illustrations.vue'
+import { LogoBlob, PawPrint, IconFacebook, IconInstagram, IconTiktok } from './Illustrations'
 
 const { t } = useI18n()
 </script>

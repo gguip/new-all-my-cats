@@ -3,7 +3,7 @@ import { ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import ScrollReveal from './ScrollReveal.vue'
 import FaqItem from './FaqItem.vue'
-import { CatStretch } from './Illustrations.vue'
+import { CatStretch } from './Illustrations'
 
 const i18n = useI18n({ useScope: 'global' })
 const t = (key: string) => i18n.t(key)

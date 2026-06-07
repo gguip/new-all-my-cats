@@ -3,7 +3,7 @@ import { useI18n } from 'vue-i18n'
 import ScrollReveal from './ScrollReveal.vue'
 import BaseButton from './BaseButton.vue'
 import AppPhoto from './AppPhoto.vue'
-import { Heart } from './Illustrations.vue'
+import { Heart } from './Illustrations'
 
 const { t } = useI18n()
 const hearts = [0, 1, 2, 3, 4]
