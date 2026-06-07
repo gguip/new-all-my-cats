@@ -38,6 +38,7 @@ const setLocale = (l: string) => {
         <a v-for="l in links.slice(2)" :key="l.key" class="nav__link" :href="l.href" @click="close">
           {{ t(l.key) }}
         </a>
+        <router-link class="nav__link" to="/familia" @click="close">{{ t('nav.family') }}</router-link>
       </nav>
 
       <div class="nav__lang">
@@ -54,6 +55,7 @@ const setLocale = (l: string) => {
         <a v-for="l in links" :key="l.key" class="drawer__link" :href="l.href" @click="close">
           {{ t(l.key) }}
         </a>
+        <router-link class="drawer__link" to="/familia" @click="close">{{ t('nav.family') }}</router-link>
         <div class="nav__lang" style="display: flex; margin-top: 18px; color: var(--cream-text)">
           <button :class="{ active: locale === 'pt-BR' }" @click="setLocale('pt-BR')">{{ t('lang.pt') }}</button>
           <button :class="{ active: locale === 'en' }" @click="setLocale('en')">{{ t('lang.en') }}</button>

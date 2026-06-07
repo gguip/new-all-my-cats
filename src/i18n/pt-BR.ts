@@ -2,7 +2,7 @@ import type en from './en'
 
 const ptBR: typeof en = {
   brand: 'Catastrophe',
-  nav: { theCats: 'Os Gatos', about: 'Sobre', support: 'Apoie', sayHi: 'Diga Oi' },
+  nav: { theCats: 'Os Gatos', about: 'Sobre', support: 'Apoie', sayHi: 'Diga Oi', family: 'Família' },
   a11y: {
     home: 'Início Catastrophe',
     menu: 'Menu',
@@ -98,6 +98,26 @@ const ptBR: typeof en = {
   footer: {
     tagline: 'Dezoito gatos. Uma casa. Zero arrependimentos.',
     copyright: '© 2026 Catastrophe — feito com patas & amor',
+  },
+  family: {
+    title: 'Árvore Genealógica',
+    subtitle: 'A dinastia dos gatos',
+    back: 'Voltar ao site',
+    hintLabel: 'Dica: ',
+    hint: 'Clique num gato para ver detalhes. Arraste o fundo para mover a árvore.',
+    detail: 'Detalhes',
+    fName: 'Nome',
+    fBirth: 'Nascimento',
+    fSex: 'Sexo',
+    fMom: 'Mãe',
+    fDad: 'Pai',
+    fPartner: 'Parceiro(a)',
+    sexF: 'Fêmea',
+    sexM: 'Macho',
+    sexX: 'Desconhecido',
+    none: '—',
+    zoomIn: 'Aproximar',
+    zoomOut: 'Afastar',
   },
 }
 

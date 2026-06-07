@@ -1,6 +1,6 @@
 export default {
   brand: 'Catastrophe',
-  nav: { theCats: 'The Cats', about: 'About', support: 'Support', sayHi: 'Say Hi' },
+  nav: { theCats: 'The Cats', about: 'About', support: 'Support', sayHi: 'Say Hi', family: 'Family' },
   a11y: {
     home: 'Catastrophe home',
     menu: 'Menu',
@@ -96,5 +96,25 @@ export default {
   footer: {
     tagline: 'Eighteen cats. One house. Zero regrets.',
     copyright: '© 2026 Catastrophe — made with paws & love',
+  },
+  family: {
+    title: 'Family Tree',
+    subtitle: 'The cat dynasty',
+    back: 'Back to site',
+    hintLabel: 'Tip: ',
+    hint: 'Click a cat for details. Drag the background to move the tree.',
+    detail: 'Details',
+    fName: 'Name',
+    fBirth: 'Birth',
+    fSex: 'Sex',
+    fMom: 'Mother',
+    fDad: 'Father',
+    fPartner: 'Partner',
+    sexF: 'Female',
+    sexM: 'Male',
+    sexX: 'Unknown',
+    none: '—',
+    zoomIn: 'Zoom in',
+    zoomOut: 'Zoom out',
   },
 }
