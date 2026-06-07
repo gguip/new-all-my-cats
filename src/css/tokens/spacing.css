@@ -1,0 +1,35 @@
+/* ============================================================
+   AllMyCats — Spacing, radius & shadow tokens
+   Soft, generous, rounded. Big pill radii on interactive
+   things, chunky cards, and low diffuse shadows (never harsh).
+   ============================================================ */
+:root{
+  /* ---- Corner radii ---- */
+  --r-pill:999px;   /* buttons, bars, tracks */
+  --r-lg:34px;      /* big cards / hero panel family */
+  --r-hero:46px;    /* the hero panel itself */
+  --r-md:22px;      /* photos, activity cards */
+  --r-card:24px;    /* cat cards */
+  --r-sm:14px;      /* inputs */
+
+  /* ---- Shadows (low, warm, diffuse) ---- */
+  --shadow:0 18px 40px -22px rgba(60,58,44,.45);       /* raised cards / hero */
+  --shadow-soft:0 10px 30px -18px rgba(60,58,44,.4);   /* resting cards */
+  --shadow-hover:0 18px 34px -20px rgba(60,58,44,.4);  /* card hover lift */
+  --shadow-btn:0 6px 0 rgba(60,58,44,.12);             /* chunky button "leg" */
+  --shadow-btn-orange:0 6px 0 rgba(176,90,30,.35);
+
+  /* ---- Spacing scale ---- */
+  --space-1:6px;
+  --space-2:10px;
+  --space-3:14px;
+  --space-4:18px;
+  --space-5:26px;
+  --space-6:34px;
+  --space-7:48px;
+  --space-8:70px;
+  --space-section:90px;  /* vertical section rhythm */
+
+  /* ---- Layout ---- */
+  --wrap:1180px;         /* max content width */
+}

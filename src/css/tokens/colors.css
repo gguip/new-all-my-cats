@@ -1,0 +1,47 @@
+/* ============================================================
+   AllMyCats — Colour tokens
+   A warm, sun-faded palette: olive green + apricot orange on
+   cream. Greens carry structure, orange is the single accent,
+   creams are the page. Earthy, hand-made, cosy — never neon.
+   ============================================================ */
+:root{
+  /* ---- Brand greens (structure / surfaces) ---- */
+  --olive:#7e8a52;        /* primary brand green — hero panels, footer, nav-on-scroll */
+  --olive-2:#717c47;      /* deeper green — menu cards, labels */
+  --olive-deep:#5f6a3c;   /* darkest green — silhouettes, depth */
+
+  /* ---- Accent (the one pop colour) ---- */
+  --orange:#f2873f;       /* apricot — CTAs, highlights, the "pop" word */
+  --orange-deep:#e0712a;  /* pressed / hover-dark orange */
+
+  /* ---- Creams & tans (the page) ---- */
+  --cream:#fff1d7;        /* page background */
+  --cream-text:#fbf3df;   /* text/icons on green surfaces */
+  --tan:#f3dfba;          /* soft tan — chips, modal close */
+  --tan-2:#ecdcb6;        /* tan border / track / hatch */
+  --sage:#c8c4a0;         /* muted sage — decorative paws, dashed borders */
+
+  /* ---- Ink & body text ---- */
+  --ink:#3c3a2c;          /* headings, strong text */
+  --body:#6c6a57;         /* body copy */
+  --gray:#686868;         /* secondary / fine print */
+
+  /* ---- Attribute-bar hues (cat personality stats) ---- */
+  --attr-fome:#f2873f;        /* Fome / Hungry  */
+  --attr-brincalhao:#7e8a52;  /* Brincalhão / Playful */
+  --attr-dorminhoco:#6f8fae;  /* Dorminhoco / Sleepy  */
+  --attr-ranzinza:#8a857a;    /* Ranzinza / Grumpy   */
+  --attr-briguento:#d2664a;   /* Briguento / Feisty  */
+
+  /* ---- Semantic aliases ---- */
+  --surface-page:var(--cream);
+  --surface-green:var(--olive);
+  --surface-green-deep:var(--olive-2);
+  --surface-card:#fffaf0;       /* cat card background */
+  --border-card:var(--tan-2);
+  --text-heading:var(--ink);
+  --text-body:var(--body);
+  --text-on-green:var(--cream-text);
+  --accent:var(--orange);
+  --accent-press:var(--orange-deep);
+}

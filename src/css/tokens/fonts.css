@@ -1,0 +1,9 @@
+/* ============================================================
+   AllMyCats — Fonts
+   All four families load from Google Fonts.
+   SUBSTITUTION NOTE: these are Google-hosted webfonts, not
+   self-hosted binaries. If you need an offline/self-hosted
+   bundle, drop the .woff2 files in assets/fonts/ and replace
+   the @import below with local @font-face rules.
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&family=Caveat:wght@500;600;700&family=Space+Mono&display=swap');

@@ -1,0 +1,40 @@
+/* ============================================================
+   AllMyCats — Typography tokens
+   Three voices: Fredoka (rounded display) for anything that
+   should feel playful & loud, Quicksand for calm body copy,
+   Caveat for hand-written doodles, Space Mono for the little
+   "placeholder / spec" tags.
+   ============================================================ */
+:root{
+  /* ---- Families ---- */
+  --font-display:"Fredoka",system-ui,sans-serif;   /* headings, buttons, labels */
+  --font-body:"Quicksand",system-ui,sans-serif;    /* paragraphs, UI text */
+  --font-hand:"Caveat",cursive;                      /* doodles ("meow") */
+  --font-mono:"Space Mono","Courier New",monospace; /* photo tags, specs */
+
+  /* ---- Weights ---- */
+  --fw-regular:400;
+  --fw-medium:500;
+  --fw-semibold:600;
+  --fw-bold:700;
+
+  /* ---- Type scale (fluid where it matters) ---- */
+  --fs-hero:clamp(42px,6.2vw,76px);     /* hero headline */
+  --fs-section:clamp(30px,4.4vw,52px);  /* section heads */
+  --fs-statement:clamp(26px,3.7vw,42px);/* big welcome statement */
+  --fs-h3:clamp(20px,2.4vw,26px);
+  --fs-card-title:22px;                  /* cat name */
+  --fs-body:17px;                        /* base body */
+  --fs-sm:15px;
+  --fs-label:13px;                       /* uppercase labels */
+  --fs-tag:11px;                         /* mono photo tags */
+
+  /* ---- Line heights ---- */
+  --lh-tight:1.05;   /* display */
+  --lh-snug:1.18;    /* statements */
+  --lh-body:1.55;    /* paragraphs */
+
+  /* ---- Letter spacing ---- */
+  --ls-display:.2px;
+  --ls-label:1.2px;  /* uppercase labels */
+}
