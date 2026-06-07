@@ -49,7 +49,8 @@ export function computeGen(cats: FamilyCat[]): Record<number, number> {
     return v
   }
   for (const c of cats) g(c.id, new Set())
-  // equalise partners to the deeper generation
+  // Equalise partners to the deeper generation. A few passes let the change
+  // propagate along partner-of-partner chains; 6 comfortably covers a 4-gen tree.
   for (let i = 0; i < 6; i++) {
     for (const c of cats) {
       if (c.partnerId != null && byId[c.partnerId]) {

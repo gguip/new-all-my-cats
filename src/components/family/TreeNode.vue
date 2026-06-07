@@ -22,7 +22,11 @@ const sexCls = (s: FamilyCat['sex']) => (s === 'f' ? 'sex-f' : s === 'm' ? 'sex-
     class="node"
     :class="{ sel: props.selected }"
     :style="{ left: props.x + 'px', top: props.y + 'px' }"
+    role="button"
+    tabindex="0"
+    :aria-pressed="props.selected ? 'true' : 'false'"
     @click.stop="$emit('select', props.cat.id)"
+    @keydown.enter.space.prevent.stop="$emit('select', props.cat.id)"
   >
     <div class="node__photo"><span>{{ td('cat.photoTag', { name: props.cat.name }) }}</span></div>
     <div class="node__name">
