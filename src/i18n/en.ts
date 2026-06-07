@@ -1,0 +1,100 @@
+export default {
+  brand: 'Catastrophe',
+  nav: { theCats: 'The Cats', about: 'About', support: 'Support', sayHi: 'Say Hi' },
+  a11y: {
+    home: 'Catastrophe home',
+    menu: 'Menu',
+    close: 'Close',
+    facebook: 'Facebook',
+    instagram: 'Instagram',
+    tiktok: 'TikTok',
+  },
+  lang: { pt: 'PT', en: 'EN' },
+  hero: {
+    title: 'Cats. Chaos. Cuddles.',
+    sub: 'Eighteen furry troublemakers, one slightly chaotic household — and never a single empty lap.',
+    cta: 'Meet the Cats',
+  },
+  welcome: {
+    statementPre: 'Welcome to the chaos: ',
+    statementMid: 'eighteen cats, one house, and absolutely zero respect for personal space ',
+    statementEnd: '— and we wouldn’t have it any other way.',
+    doodle: 'meow',
+    missionTitle: 'The idea is simple:',
+    missionBody:
+      'This is home to eighteen rescued goofballs, each with their own completely ridiculous personality — so we rated every single one of them on the traits that actually matter.',
+    features: [
+      { label: 'Sunbeam Naps', tag: 'cat napping in a sunbeam' },
+      { label: 'A Little Chaos', tag: 'cat knocking things over' },
+      { label: 'Endless Zoomies', tag: 'cat mid-zoomies' },
+    ],
+  },
+  attrs: {
+    fome: 'Hungry',
+    brincalhao: 'Playful',
+    dorminhoco: 'Sleepy',
+    ranzinza: 'Grumpy',
+    briguento: 'Feisty',
+  },
+  cat: { photoTag: 'photo of {name}' },
+  team: {
+    headStart: 'Meet the Whole ',
+    headHighlight: 'Gang',
+    headEnd: '!',
+    sub: 'All 18 of them — scientifically* rated on the traits that matter most. (*not actually scientific.)',
+  },
+  support: {
+    headPre: 'Share the ',
+    headHl1: 'Love',
+    headMid: ': Help the Cats Still ',
+    headHl2: 'Waiting',
+    body: "These eighteen goofballs hit the jackpot. If you'd like to help the cats still looking for their humans, consider donating to a shelter near you — every little bit changes a life.",
+    cta: 'Support a Shelter',
+    photoTag: 'one of the rescues, being held',
+  },
+  faq: {
+    headHl1: 'Frequently',
+    headMid: ' Asked ',
+    headHl2: 'Questions',
+    items: [
+      {
+        q: 'How do you tell 18 cats apart?',
+        a: 'Honestly? Vibes, mostly. After a while each one has their own walk, their own meow and a favourite napping spot that gives them away instantly.',
+      },
+      {
+        q: 'Do they all get along?',
+        a: 'Mostly! There are alliances, rivalries and the occasional 3am wrestling tournament — but at the end of the day they pile up together like one big furry quilt.',
+      },
+      {
+        q: "Who's actually in charge?",
+        a: 'Definitely not me. The one with the highest Ranzinza score usually runs the household, and the other seventeen just go along with it.',
+      },
+      {
+        q: "What's the hardest part of having 18 cats?",
+        a: 'Vacuuming. And accepting that every warm laptop, clean shirt and open box will instantly become a cat.',
+      },
+      {
+        q: 'How much do they sleep?',
+        a: 'Collectively? Roughly 280 hours a day. Check the Dorminhoco bars — some of them are basically furry batteries permanently on standby.',
+      },
+      {
+        q: 'Can I see more of them?',
+        a: "That's literally what this whole page is for. Scroll up and meet the gang, one chaotic little personality at a time.",
+      },
+    ],
+  },
+  contact: {
+    headPre: 'Come ',
+    headHl: 'Say Hi',
+    col1Title: 'The household',
+    col1Body: '18 cats · 1 very tired human · roughly 4kg of fur swept up every week.',
+    col2Title: 'Where',
+    col2Body: 'A cozy little apartment that is, at this point, about 80% cat by volume.',
+    col3Title: 'Follow the chaos',
+    col3Body: 'Daily naps, zoomies and crimes — documented in full.',
+  },
+  footer: {
+    tagline: 'Eighteen cats. One house. Zero regrets.',
+    copyright: '© 2026 Catastrophe — made with paws & love',
+  },
+}
