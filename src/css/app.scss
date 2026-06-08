@@ -78,6 +78,7 @@ h1,h2,h3,h4,.disp{
   color:var(--ink);position:relative;padding:6px 2px;transition:color .2s;
 }
 .nav.scrolled .nav__link{color:var(--cream-text);}
+.nav.scrolled .logo{color:var(--cream-text);}
 .nav__link::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--orange);transform:scaleX(0);transform-origin:left;transition:transform .25s ease;border-radius:2px;}
 .nav__link:hover{color:var(--orange);}
 .nav.scrolled .nav__link:hover{color:#fff;}
