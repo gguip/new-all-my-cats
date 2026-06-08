@@ -1,80 +1,56 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { FAMILY } from 'src/data/family'
-import { layoutTree } from 'src/lib/familyLayout'
-import { buildWires } from 'src/lib/familyWires'
-import { useDragPan } from 'src/composables/useDragPan'
+import { FAMILY, type FamilyCat } from 'src/data/family'
+import { buildTimeline } from 'src/lib/familyTimeline'
 import FamilyTopBar from 'src/components/family/FamilyTopBar.vue'
-import TreeNode from 'src/components/family/TreeNode.vue'
+import TimelineCard from 'src/components/family/TimelineCard.vue'
 import TreeDetailPanel from 'src/components/family/TreeDetailPanel.vue'
-import ZoomControls from 'src/components/family/ZoomControls.vue'
 
 const { t } = useI18n()
-const layout = layoutTree(FAMILY)
-const wires = buildWires(layout)
+const buckets = buildTimeline(FAMILY)
 
-const selId = ref<number | null>(null)
-const zoom = ref(1)
-const stageRef = ref<HTMLElement | null>(null)
-useDragPan(stageRef)
-
-const selected = computed<typeof FAMILY[number] | null>(() =>
-  selId.value != null ? (layout.byId[selId.value] ?? null) : null,
+const selName = ref<string | null>(null)
+const selected = computed<FamilyCat | null>(() =>
+  selName.value != null ? (FAMILY.find((c) => c.name === selName.value) ?? null) : null,
 )
-// The sizer's box uses the SCALED dimensions so the .stage scroll area grows
-// with zoom (CSS transforms alone don't extend scrollable overflow).
-const canvasStyle = computed(() => ({
-  width: layout.width * zoom.value + 'px',
-  height: layout.height * zoom.value + 'px',
-}))
-// The inner holds wires + nodes at natural size and is visually scaled.
-const innerStyle = computed(() => ({
-  width: layout.width + 'px',
-  height: layout.height + 'px',
-  transform: `scale(${zoom.value})`,
-}))
-const zoomIn = () => {
-  zoom.value = Math.min(1.6, +(zoom.value + 0.15).toFixed(2))
-}
-const zoomOut = () => {
-  zoom.value = Math.max(0.5, +(zoom.value - 0.15).toFixed(2))
-}
+
+const yearLabel = (year: string): string => (year === '' ? t('family.noDate') : year)
 </script>
 
 <template>
   <div class="family-root">
     <FamilyTopBar />
 
-    <div ref="stageRef" class="stage" @click="selId = null">
-      <div class="canvas grab" :style="canvasStyle">
-        <div class="canvas__inner" :style="innerStyle">
-          <svg
-            class="wires"
-            :width="layout.width"
-            :height="layout.height"
-            :viewBox="`0 0 ${layout.width} ${layout.height}`"
-          >
-            <path v-for="(d, i) in wires.parent" :key="'p' + i" class="wire" :d="d" />
-            <path v-for="(d, i) in wires.partner" :key="'h' + i" class="wire wire--partner" :d="d" />
-          </svg>
-          <TreeNode
-            v-for="c in FAMILY"
-            :key="c.id"
+    <div class="timeline" @click="selName = null">
+      <section v-for="b in buckets" :key="b.year || 'nodate'" class="bucket">
+        <h2 class="bucket__year">{{ yearLabel(b.year) }}</h2>
+
+        <div class="bucket__cats">
+          <TimelineCard
+            v-for="c in b.cats"
+            :key="c.name"
             :cat="c"
-            :x="layout.pos[c.id]?.x ?? 0"
-            :y="layout.pos[c.id]?.y ?? 0"
-            :selected="c.id === selId"
-            @select="selId = $event"
+            :selected="c.name === selName"
+            @select="selName = $event"
           />
+
+          <div v-for="lit in b.litters" :key="lit.momName + lit.birth" class="litterbox">
+            <span class="litterbox__label">{{ t('family.litterOf', { name: lit.momName }) }}</span>
+            <div class="litterbox__cats">
+              <TimelineCard
+                v-for="k in lit.kittens"
+                :key="k.name"
+                :cat="k"
+                :selected="k.name === selName"
+                @select="selName = $event"
+              />
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
     </div>
 
-    <div class="hintchip"><b>{{ t('family.hintLabel') }}</b>{{ t('family.hint') }}</div>
-
-    <ZoomControls @zoom-in="zoomIn" @zoom-out="zoomOut" />
-
-    <TreeDetailPanel :cat="selected" :by-id="layout.byId" @close="selId = null" />
+    <TreeDetailPanel :cat="selected" :family="FAMILY" @close="selName = null" />
   </div>
 </template>
