@@ -7,11 +7,11 @@
 
 /* full-screen container (scoped — does NOT set body{overflow:hidden}) */
 .family-root {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   position: relative;
-  overflow: hidden;
+  overflow-y: auto;
 
   /* ---------- Top bar ---------- */
   .tbar {
@@ -84,121 +84,7 @@
     border: 1.5px solid rgba(255, 255, 255, 0.4);
   }
 
-  /* ---------- Canvas ---------- */
-  .stage {
-    position: relative;
-    flex: 1;
-    overflow: auto;
-    background: var(--cream);
-  }
-  /* sizer: its box (scaled dims) defines the scrollable area */
-  .canvas {
-    position: relative;
-  }
-  .canvas.grab {
-    cursor: grab;
-  }
-  .canvas.grabbing {
-    cursor: grabbing;
-  }
-  /* inner: holds wires + nodes at natural size, visually scaled */
-  .canvas__inner {
-    position: relative;
-    transform-origin: 0 0;
-  }
-
-  /* connectors */
-  .wires {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    pointer-events: none;
-    overflow: visible;
-  }
-  .wire {
-    fill: none;
-    stroke: var(--olive);
-    stroke-width: 2.5;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-  .wire--partner {
-    stroke: var(--orange);
-    stroke-width: 2.5;
-    stroke-dasharray: 1 7;
-  }
-
-  /* ---------- Cat node ---------- */
-  .node {
-    position: absolute;
-    z-index: 2;
-    width: 116px;
-    background: var(--surface-card);
-    border: 1.5px solid var(--tan-2);
-    border-radius: 18px;
-    padding: 10px 10px 11px;
-    box-shadow: var(--shadow-soft);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 7px;
-    cursor: pointer;
-    transition: transform 0.16s, box-shadow 0.16s, border-color 0.16s;
-  }
-  .node:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-hover);
-    border-color: var(--sage);
-  }
-  .node:focus-visible {
-    outline: none;
-    border-color: var(--orange);
-    box-shadow: 0 0 0 3px rgba(242, 135, 63, 0.35), var(--shadow-hover);
-  }
-  .node.sel {
-    border-color: var(--orange);
-    box-shadow: 0 0 0 3px rgba(242, 135, 63, 0.25), var(--shadow-hover);
-  }
-  .node__photo {
-    width: 84px;
-    height: 84px;
-    border-radius: 50%;
-    overflow: hidden;
-    position: relative;
-    background: repeating-linear-gradient(135deg, var(--tan-2) 0 10px, var(--tan) 10px 20px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 0 0 auto;
-  }
-  .node__photo span {
-    font-family: var(--font-mono);
-    font-size: 8.5px;
-    color: var(--olive-2);
-    text-transform: uppercase;
-    letter-spacing: 0.3px;
-    text-align: center;
-    padding: 0 4px;
-    line-height: 1.25;
-  }
-  .node__name {
-    font-family: var(--font-display);
-    font-weight: 600;
-    font-size: 15px;
-    color: var(--ink);
-    text-align: center;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    line-height: 1.05;
-  }
-  .node__birth {
-    font-family: var(--font-body);
-    font-weight: 500;
-    font-size: 11px;
-    color: var(--gray);
-    margin-top: -3px;
-  }
+  /* ---------- Sex dot ---------- */
   .sexdot {
     width: 9px;
     height: 9px;
@@ -291,62 +177,6 @@
     margin: 18px 0;
   }
 
-  /* hint chip */
-  .hintchip {
-    position: absolute;
-    left: 18px;
-    bottom: 18px;
-    z-index: 20;
-    max-width: 280px;
-    background: rgba(255, 250, 240, 0.94);
-    border: 1.5px solid var(--tan-2);
-    border-radius: 14px;
-    padding: 11px 14px;
-    font-family: var(--font-body);
-    font-size: 12.5px;
-    color: var(--body);
-    line-height: 1.4;
-    box-shadow: var(--shadow-soft);
-  }
-  .hintchip b {
-    font-family: var(--font-display);
-    color: var(--olive);
-  }
-
-  /* zoom controls */
-  .zoom {
-    position: absolute;
-    right: 18px;
-    bottom: 18px;
-    z-index: 20;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-  .panel.open ~ .zoom {
-    right: 338px;
-  }
-  .zoom button {
-    width: 42px;
-    height: 42px;
-    border-radius: 12px;
-    background: #fffaf0;
-    border: 1.5px solid var(--tan-2);
-    color: var(--ink);
-    font-family: var(--font-display);
-    font-size: 20px;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: var(--shadow-soft);
-    transition: background 0.16s, transform 0.16s;
-  }
-  .zoom button:hover {
-    background: #fff;
-    transform: translateY(-1px);
-  }
-
   @media (max-width: 620px) {
     .tbar__title small {
       display: none;
@@ -354,13 +184,103 @@
     .panel {
       width: 88vw;
     }
-    .panel.open ~ .zoom {
-      right: 18px;
-      bottom: auto;
-      top: 78px;
-    }
-    .hintchip {
-      display: none;
-    }
   }
+}
+
+.timeline {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 16px 120px;
+  overflow-y: auto;
+}
+
+.bucket {
+  margin-bottom: 36px;
+}
+
+.bucket__year {
+  font-size: 20px;
+  font-weight: 700;
+  opacity: 0.7;
+  letter-spacing: 1px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+  padding-bottom: 6px;
+  margin: 0 0 16px;
+}
+
+.bucket__cats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.tcard {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 10px;
+  width: 116px;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.12s ease;
+}
+.tcard:hover,
+.tcard:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  outline: none;
+}
+.tcard.sel {
+  border-color: var(--orange);
+  box-shadow: 0 0 0 2px var(--orange);
+}
+.tcard__photo {
+  height: 70px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.45);
+  margin-bottom: 8px;
+}
+.tcard__name {
+  font-weight: 600;
+  font-size: 14px;
+}
+.tcard__birth {
+  font-size: 12px;
+  opacity: 0.55;
+}
+
+.litterbox {
+  border: 2px dashed var(--attr-brincalhao, #a8e6cf);
+  border-radius: 14px;
+  padding: 10px 12px 12px;
+}
+.litterbox__label {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.7;
+  margin-bottom: 8px;
+}
+.litterbox__cats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.panel__section {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.7;
+  margin: 4px 0 8px;
 }
