@@ -1,38 +1,38 @@
-// Hardcoded genealogy of the 18 cats — an invented 4-generation dynasty
-// descending from Mingau & Tom. Edit relationships here.
+// Real-world roster for the family timeline. Cats are organised by the YEAR
+// THEY ARRIVED. Only two cats (Mingau, Maju) had litters; their kittens carry
+// `momName` and are grouped into a litter box at their BIRTH year. Names match
+// CATS[].name in cats.ts so the detail panel can show personality stats.
+// Edit arrival/birth years and litter membership here as real data arrives.
 export type Sex = 'f' | 'm' | 'x'
 
 export interface FamilyCat {
-  id: number
-  name: string
-  birth: string // year as string, '' if unknown
+  name: string // join key with CATS[].name
+  arrival: string // year arrived in the family — timeline axis ('' if unknown)
+  birth?: string // birth year (optional)
   sex: Sex
-  momId: number | null
-  dadId: number | null
-  partnerId: number | null
+  momName?: string // set only on the kittens of the two litters
 }
 
 export const FAMILY: FamilyCat[] = [
-  // Gen 0 — founders
-  { id: 1, name: 'Mingau', birth: '2014', sex: 'f', momId: null, dadId: null, partnerId: 2 },
-  { id: 2, name: 'Tom', birth: '2013', sex: 'm', momId: null, dadId: null, partnerId: 1 },
-  // Gen 1 — kittens + spouses
-  { id: 3, name: 'Biscoito', birth: '2017', sex: 'm', momId: 1, dadId: 2, partnerId: 6 },
-  { id: 4, name: 'Amora', birth: '2017', sex: 'f', momId: 1, dadId: 2, partnerId: 7 },
-  { id: 5, name: 'Frajola', birth: '2018', sex: 'm', momId: 1, dadId: 2, partnerId: 8 },
-  { id: 6, name: 'Nina', birth: '2017', sex: 'f', momId: null, dadId: null, partnerId: 3 },
-  { id: 7, name: 'Bóris', birth: '2016', sex: 'm', momId: null, dadId: null, partnerId: 4 },
-  { id: 8, name: 'Maju', birth: '2018', sex: 'f', momId: null, dadId: null, partnerId: 5 },
-  // Gen 2 — grandkittens + spouses
-  { id: 9, name: 'Tigrão', birth: '2020', sex: 'm', momId: 6, dadId: 3, partnerId: 14 },
-  { id: 10, name: 'Pipoca', birth: '2020', sex: 'f', momId: 6, dadId: 3, partnerId: 16 },
-  { id: 11, name: 'Romeu', birth: '2020', sex: 'm', momId: 4, dadId: 7, partnerId: 15 },
-  { id: 12, name: 'Bidu', birth: '2021', sex: 'm', momId: 4, dadId: 7, partnerId: null },
-  { id: 13, name: 'Jujuba', birth: '2021', sex: 'f', momId: 8, dadId: 5, partnerId: null },
-  { id: 14, name: 'Nala', birth: '2020', sex: 'f', momId: null, dadId: null, partnerId: 9 },
-  { id: 15, name: 'Lola', birth: '2021', sex: 'f', momId: null, dadId: null, partnerId: 11 },
-  { id: 16, name: 'Salem', birth: '2019', sex: 'm', momId: null, dadId: null, partnerId: 10 },
-  // Gen 3 — great-grandkittens
-  { id: 17, name: 'Simba', birth: '2023', sex: 'm', momId: 14, dadId: 9, partnerId: null },
-  { id: 18, name: 'Chico', birth: '2023', sex: 'm', momId: 15, dadId: 11, partnerId: null },
+  // Mother #1 and her litter
+  { name: 'Mingau', arrival: '2016', birth: '2014', sex: 'f' },
+  { name: 'Amora', arrival: '2017', birth: '2017', sex: 'f', momName: 'Mingau' },
+  { name: 'Biscoito', arrival: '2017', birth: '2017', sex: 'm', momName: 'Mingau' },
+  // Mother #2 and her litter
+  { name: 'Maju', arrival: '2017', birth: '2016', sex: 'f' },
+  { name: 'Jujuba', arrival: '2019', birth: '2019', sex: 'f', momName: 'Maju' },
+  { name: 'Bidu', arrival: '2019', birth: '2019', sex: 'm', momName: 'Maju' },
+  // Unrelated arrivals
+  { name: 'Tom', arrival: '2016', birth: '2013', sex: 'm' },
+  { name: 'Frajola', arrival: '2018', birth: '2018', sex: 'm' },
+  { name: 'Nina', arrival: '2018', birth: '2017', sex: 'f' },
+  { name: 'Bóris', arrival: '2018', birth: '2016', sex: 'm' },
+  { name: 'Salem', arrival: '2019', birth: '2019', sex: 'm' },
+  { name: 'Pipoca', arrival: '2020', birth: '2020', sex: 'f' },
+  { name: 'Tigrão', arrival: '2020', birth: '2020', sex: 'm' },
+  { name: 'Romeu', arrival: '2020', birth: '2020', sex: 'm' },
+  { name: 'Nala', arrival: '2021', birth: '2020', sex: 'f' },
+  { name: 'Lola', arrival: '2021', birth: '2021', sex: 'f' },
+  { name: 'Simba', arrival: '2023', birth: '2023', sex: 'm' },
+  { name: 'Chico', arrival: '2023', birth: '2023', sex: 'm' },
 ]
