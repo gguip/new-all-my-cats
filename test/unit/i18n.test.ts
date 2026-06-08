@@ -25,6 +25,12 @@ describe('i18n messages', () => {
     locale.value = 'en'
     expect(t('cat.photoTag', { name: 'Mingau' })).toBe('photo of Mingau')
   })
+  it('builds the litterOf label with a name param', () => {
+    locale.value = 'pt-BR'
+    expect(t('family.litterOf', { name: 'Mingau' })).toBe('filhos de Mingau')
+    locale.value = 'en'
+    expect(t('family.litterOf', { name: 'Mingau' })).toBe('kittens of Mingau')
+  })
   it('exposes all 6 faq items in both locales', () => {
     expect(messages.en.faq.items).toHaveLength(6)
     expect(messages['pt-BR'].faq.items).toHaveLength(6)
