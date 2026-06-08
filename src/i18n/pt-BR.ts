@@ -97,7 +97,7 @@ const ptBR: typeof en = {
   },
   footer: {
     tagline: 'Dezoito gatos. Uma casa. Zero arrependimentos.',
-    copyright: '© 2026 Catastrophe — feito com patas & amor',
+    copyright: '© 2026 Catastrophe — feito com patas 🐾 & amor ♥️ por {author}',
   },
   family: {
     title: 'Linha do Tempo',

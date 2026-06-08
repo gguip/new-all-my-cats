@@ -41,7 +41,11 @@ const { t } = useI18n()
       <div class="footer__inner">
         <LogoMark />
         <p :style="{ fontSize: '14px', opacity: 0.85, marginTop: '12px' }">{{ t('footer.tagline') }}</p>
-        <p :style="{ fontSize: '13px', opacity: 0.65, marginTop: '6px' }">{{ t('footer.copyright') }}</p>
+        <i18n-t keypath="footer.copyright" tag="p" class="footer__copy" :style="{ fontSize: '13px', opacity: 0.65, marginTop: '6px' }">
+          <template #author>
+            <a href="https://github.com/gguip" target="_blank" rel="noopener noreferrer">gguip</a>
+          </template>
+        </i18n-t>
       </div>
     </footer>
   </section>

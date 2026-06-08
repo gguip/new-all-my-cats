@@ -95,7 +95,7 @@ export default {
   },
   footer: {
     tagline: 'Eighteen cats. One house. Zero regrets.',
-    copyright: '© 2026 Catastrophe — made with paws & love',
+    copyright: '© 2026 Catastrophe — made with paws 🐾 & love ♥️ by {author}',
   },
   family: {
     title: 'Timeline',
