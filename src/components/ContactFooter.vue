@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import ScrollReveal from './ScrollReveal.vue'
-import { LogoBlob, PawPrint, IconFacebook, IconInstagram, IconTiktok } from './Illustrations'
+import { LogoMark, PawPrint, IconFacebook, IconInstagram, IconTiktok } from './Illustrations'
 
 const { t } = useI18n()
 </script>
@@ -39,7 +39,7 @@ const { t } = useI18n()
       <PawPrint :size="40" class="decor" :style="{ left: '12%', top: '20px', color: 'rgba(255,255,255,.18)' }" />
       <PawPrint :size="28" class="decor" :style="{ right: '16%', bottom: '20px', color: 'rgba(255,255,255,.18)', transform: 'rotate(30deg)' }" />
       <div class="footer__inner">
-        <LogoBlob />
+        <LogoMark />
         <p :style="{ fontSize: '14px', opacity: 0.85, marginTop: '12px' }">{{ t('footer.tagline') }}</p>
         <p :style="{ fontSize: '13px', opacity: 0.65, marginTop: '6px' }">{{ t('footer.copyright') }}</p>
       </div>

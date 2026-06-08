@@ -3,7 +3,7 @@ import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import ScrollReveal from './ScrollReveal.vue'
 import AppPhoto from './AppPhoto.vue'
-import { PawPrint, CatStretch } from './Illustrations'
+import { PawPrint } from './Illustrations'
 
 const i18n = useI18n({ useScope: 'global' })
 const features = computed(() => i18n.tm('welcome.features'))
@@ -27,7 +27,6 @@ const featureCls = ['photo--sq', 'photo--wide', 'photo--wide']
         class="decor"
         :style="{ left: p.x, top: p.y, transform: `rotate(${p.r}deg)`, color: p.c, opacity: p.o }"
       />
-      <CatStretch :size="300" class="decor" :style="{ right: '2%', top: '6%', color: 'var(--tan-2)', opacity: 0.8 }" />
 
       <ScrollReveal>
         <h2 class="welcome__statement">

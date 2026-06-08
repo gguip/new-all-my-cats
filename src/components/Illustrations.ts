@@ -1,23 +1,18 @@
 import { defineComponent, h } from 'vue'
 
-export const LogoBlob = defineComponent({
-  name: 'LogoBlob',
+export const LogoMark = defineComponent({
+  name: 'LogoMark',
   setup() {
     return () =>
       h('div', { class: 'logo' }, [
-        h('svg', { viewBox: '0 0 100 92', 'aria-hidden': 'true' }, [
-          h('g', { fill: 'var(--cream)' }, [
-            h('circle', { cx: 34, cy: 30, r: 19 }),
-            h('circle', { cx: 66, cy: 30, r: 19 }),
-            h('circle', { cx: 22, cy: 52, r: 15 }),
-            h('circle', { cx: 78, cy: 52, r: 15 }),
-            h('circle', { cx: 50, cy: 40, r: 26 }),
-            h('circle', { cx: 36, cy: 60, r: 16 }),
-            h('circle', { cx: 64, cy: 60, r: 16 }),
-            h('circle', { cx: 50, cy: 64, r: 18 }),
-          ]),
-        ]),
         h('span', 'Catastrophe'),
+        h('svg', { viewBox: '0 0 40 40', fill: 'currentColor', 'aria-hidden': 'true' }, [
+          h('ellipse', { cx: 20, cy: 27, rx: 11, ry: 9 }),
+          h('ellipse', { cx: 8.5, cy: 17, rx: 4.2, ry: 5 }),
+          h('ellipse', { cx: 16, cy: 10, rx: 4.2, ry: 5 }),
+          h('ellipse', { cx: 24, cy: 10, rx: 4.2, ry: 5 }),
+          h('ellipse', { cx: 31.5, cy: 17, rx: 4.2, ry: 5 }),
+        ]),
       ])
   },
 })
@@ -73,24 +68,6 @@ export const Heart = defineComponent({
   },
 })
 
-export const CatStretch = defineComponent({
-  name: 'CatStretch',
-  props: { size: { type: Number, default: 200 } },
-  setup(props) {
-    return () =>
-      h('svg', { width: props.size, height: props.size * 0.7, viewBox: '0 0 240 168', class: 'silhouette', 'aria-hidden': 'true', fill: 'currentColor' }, [
-        h('path', { d: 'M192 92 C218 90 234 70 229 45 C226 28 206 27 207 45 C210 60 217 79 188 85 Z' }),
-        h('path', { d: 'M40 92 C30 78 34 54 54 50 C70 47 74 60 86 66 C120 58 168 60 196 90 C208 102 206 124 192 132 C152 144 92 144 60 132 C44 126 40 106 40 92 Z' }),
-        h('polygon', { points: '52,53 54,20 70,50' }),
-        h('polygon', { points: '70,50 82,20 86,54' }),
-        h('rect', { x: 58, y: 122, width: 11, height: 40, rx: 5.5 }),
-        h('rect', { x: 80, y: 124, width: 11, height: 38, rx: 5.5 }),
-        h('rect', { x: 160, y: 124, width: 11, height: 38, rx: 5.5 }),
-        h('rect', { x: 182, y: 122, width: 11, height: 40, rx: 5.5 }),
-      ])
-  },
-})
-
 export const IconFacebook = defineComponent({
   name: 'IconFacebook',
   props: { size: { type: Number, default: 18 } },
@@ -122,6 +99,53 @@ export const IconTiktok = defineComponent({
     return () =>
       h('svg', { width: props.size, height: props.size, viewBox: '0 0 24 24', fill: 'currentColor', 'aria-hidden': 'true' }, [
         h('path', { d: 'M16.5 3c.4 2.2 1.8 3.8 4 4.1v2.7c-1.4.1-2.8-.3-4-1v6.3c0 3.2-2.4 5.6-5.5 5.6S5.5 18.3 5.5 15.2c0-3 2.4-5.2 5.4-5.1v2.8c-1.5-.2-2.7.9-2.7 2.3 0 1.5 1.1 2.5 2.5 2.5 1.5 0 2.6-1.1 2.6-2.8V3Z' }),
+      ])
+  },
+})
+
+export const FlagBR = defineComponent({
+  name: 'FlagBR',
+  setup() {
+    return () =>
+      h('svg', { viewBox: '0 0 28 20', class: 'flag', 'aria-hidden': 'true' }, [
+        h('rect', { width: 28, height: 20, rx: 2, fill: '#009b3a' }),
+        h('path', { d: 'M14 2.5 25 10 14 17.5 3 10Z', fill: '#fedf00' }),
+        h('circle', { cx: 14, cy: 10, r: 3.6, fill: '#002776' }),
+      ])
+  },
+})
+
+export const FlagES = defineComponent({
+  name: 'FlagES',
+  setup() {
+    return () =>
+      h('svg', { viewBox: '0 0 28 20', class: 'flag', 'aria-hidden': 'true' }, [
+        h('defs', [
+          h('clipPath', { id: 'flag-es-clip' }, [h('rect', { width: 28, height: 20, rx: 2 })]),
+        ]),
+        h('g', { 'clip-path': 'url(#flag-es-clip)' }, [
+          h('rect', { width: 28, height: 20, fill: '#aa151b' }),
+          h('rect', { y: 5, width: 28, height: 10, fill: '#f1bf00' }),
+        ]),
+      ])
+  },
+})
+
+export const FlagEN = defineComponent({
+  name: 'FlagEN',
+  setup() {
+    return () =>
+      h('svg', { viewBox: '0 0 28 20', class: 'flag', 'aria-hidden': 'true' }, [
+        h('defs', [
+          h('clipPath', { id: 'flag-en-clip' }, [h('rect', { width: 28, height: 20, rx: 2 })]),
+        ]),
+        h('g', { 'clip-path': 'url(#flag-en-clip)' }, [
+          h('rect', { width: 28, height: 20, fill: '#012169' }),
+          h('path', { d: 'M0 0 28 20M28 0 0 20', stroke: '#fff', 'stroke-width': 4 }),
+          h('path', { d: 'M0 0 28 20M28 0 0 20', stroke: '#c8102e', 'stroke-width': 2 }),
+          h('path', { d: 'M14 0V20M0 10H28', stroke: '#fff', 'stroke-width': 6 }),
+          h('path', { d: 'M14 0V20M0 10H28', stroke: '#c8102e', 'stroke-width': 3.5 }),
+        ]),
       ])
   },
 })

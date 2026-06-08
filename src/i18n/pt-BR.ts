@@ -11,7 +11,7 @@ const ptBR: typeof en = {
     instagram: 'Instagram',
     tiktok: 'TikTok',
   },
-  lang: { pt: 'PT', en: 'EN' },
+  lang: { pt: 'PT', en: 'EN', es: 'ES', ptFull: 'Português', enFull: 'English', esFull: 'Español' },
   hero: {
     title: 'Gatos. Caos. Carinho.',
     sub: 'Dezoito encrenqueiros peludos, uma casa meio caótica — e nunca um colo vazio.',

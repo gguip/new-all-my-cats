@@ -14,7 +14,10 @@ sem busca externa.
 - **Forma:** `PawPrint` existente — pegada clássica de 4 dedos + coxim, plana, 1 cor.
 - **Lockup:** texto "Catastrophe" primeiro, ícone da pata à direita (linha).
 - **Cor:** `var(--olive)` via `currentColor` (herda do `.logo`).
-- **Renomear:** componente `LogoBlob` → `Logo` (não é mais blob).
+- **Renomear:** componente `LogoBlob` → `LogoMark` (não é mais blob; `LogoMark`
+  e não `Logo` por causa da regra eslint `vue/multi-word-component-names`).
+- **Footer:** `.footer .logo` muda de `var(--olive)` → `var(--cream-text)`, senão
+  a logo (agora cor única herdada) fica invisível no fundo olive do footer.
 
 ## Estado atual
 
@@ -33,7 +36,7 @@ sem busca externa.
 
 ### 1. `src/components/Illustrations.ts`
 
-Reescrever `LogoBlob` como `Logo`:
+Reescrever `LogoBlob` como `LogoMark`:
 
 - `name: 'Logo'`, export `const Logo`.
 - Render: `<div.logo>` contendo, nesta ordem:
@@ -57,7 +60,7 @@ Reescrever `LogoBlob` como `Logo`:
 
 ### 3. Sites de uso (3 arquivos)
 
-Trocar import e tag `LogoBlob` → `Logo`:
+Trocar import e tag `LogoBlob` → `LogoMark`:
 
 - `src/components/AppNav.vue` (import linha 5, uso linha 48)
 - `src/components/family/FamilyTopBar.vue` (import + uso linha 11)

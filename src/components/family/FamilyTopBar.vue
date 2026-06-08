@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import { LogoBlob } from 'src/components/Illustrations'
+import { LogoMark } from 'src/components/Illustrations'
 
 const { t } = useI18n()
 </script>
@@ -8,7 +8,7 @@ const { t } = useI18n()
 <template>
   <div class="tbar">
     <router-link class="tbar__brand" to="/" :title="t('family.back')">
-      <LogoBlob />
+      <LogoMark />
       <span class="tbar__title">{{ t('family.title') }}<small>{{ t('family.subtitle') }}</small></span>
     </router-link>
     <div class="tbar__spacer" />

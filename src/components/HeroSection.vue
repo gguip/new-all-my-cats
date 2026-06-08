@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import BaseButton from './BaseButton.vue'
-import { PawPad, PawPrint, CatStretch } from './Illustrations'
+import { PawPad, PawPrint } from './Illustrations'
 
 const { t } = useI18n()
 
@@ -38,7 +38,6 @@ const trail = [0, 1, 2, 3, 4]
           :style="{ color: 'var(--cream-text)', opacity: 0.55, transform: `translateY(${i % 2 ? 8 : 0}px) rotate(-30deg)` }"
         />
       </div>
-      <CatStretch :size="230" class="hero__cat" />
       <div class="hero__content">
         <h1 class="hero__title">{{ t('hero.title') }}</h1>
         <p class="hero__sub">{{ t('hero.sub') }}</p>

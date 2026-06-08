@@ -13,9 +13,21 @@ declare module 'vue-i18n' {
 }
 /* eslint-enable @typescript-eslint/no-empty-object-type */
 
+const STORAGE_KEY = 'catastrophe.locale'
+
+function initialLocale(): MessageLanguages {
+  const fallback: MessageLanguages = 'pt-BR'
+  if (typeof window === 'undefined') return fallback
+  const saved = window.localStorage.getItem(STORAGE_KEY)
+  if (saved && Object.keys(messages).includes(saved)) {
+    return saved as MessageLanguages
+  }
+  return fallback
+}
+
 export default defineBoot(({ app }) => {
   const i18n = createI18n<{ message: MessageSchema }, MessageLanguages>({
-    locale: 'pt-BR',
+    locale: initialLocale(),
     fallbackLocale: 'en',
     legacy: false,
     globalInjection: true,
