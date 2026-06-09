@@ -184,6 +184,11 @@ h1,h2,h3,h4,.disp{
 .cat-card:nth-child(3n+1) h4,.cat-card:nth-child(3n) h4{color:var(--olive);}
 .cat-card h4::before{content:"";width:9px;height:9px;border-radius:50%;background:currentColor;opacity:.5;}
 
+/* memorial cats */
+.cat-card--memorial{opacity:.85;}
+.cat-card__star{color:var(--orange);cursor:help;font-size:18px;}
+.photo--memorial{filter:grayscale(1);opacity:.75;}
+
 .cat-stats{display:flex;flex-direction:column;gap:11px;}
 .stat__top{display:flex;align-items:baseline;justify-content:space-between;}
 .stat__label{font-family:var(--font-display);font-weight:var(--fw-medium);font-size:12.5px;letter-spacing:.4px;text-transform:uppercase;color:var(--olive-2);}

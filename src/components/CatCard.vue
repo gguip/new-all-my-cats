@@ -52,9 +52,12 @@ onBeforeUnmount(cleanup)
 </script>
 
 <template>
-  <div ref="root" class="cat-card">
-    <AppPhoto :label="td('cat.photoTag', { name: props.cat.name })" />
-    <h4>{{ props.cat.name }}</h4>
+  <div ref="root" class="cat-card" :class="{ 'cat-card--memorial': props.cat.memorial }">
+    <AppPhoto :label="td('cat.photoTag', { name: props.cat.name })" :cls="props.cat.memorial ? 'photo--memorial' : ''" />
+    <h4>
+      {{ props.cat.name }}
+      <span v-if="props.cat.memorial" class="cat-card__star" :title="td('cat.memorial')">★</span>
+    </h4>
     <div class="cat-stats">
       <AttributeBar
         v-for="(a, i) in props.attrs"

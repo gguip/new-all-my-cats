@@ -6,8 +6,8 @@ const i18n = createI18n({ legacy: false, locale: 'pt-BR', fallbackLocale: 'en', 
 const { t, locale } = i18n.global
 
 describe('i18n messages', () => {
-  it('has both locales', () => {
-    expect(Object.keys(messages).sort()).toEqual(['en', 'pt-BR'])
+  it('has all three locales', () => {
+    expect(Object.keys(messages).sort()).toEqual(['en', 'es', 'pt-BR'])
   })
   it('defaults to pt-BR copy', () => {
     locale.value = 'pt-BR'
@@ -31,8 +31,9 @@ describe('i18n messages', () => {
     locale.value = 'en'
     expect(t('family.litterOf', { name: 'Mingau' })).toBe('kittens of Mingau')
   })
-  it('exposes all 6 faq items in both locales', () => {
+  it('exposes all 6 faq items in all locales', () => {
     expect(messages.en.faq.items).toHaveLength(6)
+    expect(messages.es.faq.items).toHaveLength(6)
     expect(messages['pt-BR'].faq.items).toHaveLength(6)
   })
 })

@@ -38,7 +38,10 @@ const es: typeof en = {
     ranzinza: 'Gruñón',
     briguento: 'Peleón',
   },
-  cat: { photoTag: 'foto de {name}' },
+  cat: {
+    photoTag: 'foto de {name}',
+    memorial: 'Por siempre en nuestros corazones ★',
+  },
   team: {
     headStart: 'Conoce a la ',
     headHighlight: 'Pandilla Entera',

@@ -8,8 +8,8 @@ import type { FamilyCat } from 'src/data/family'
 const i18n = createI18n({ legacy: false, locale: 'pt-BR', fallbackLocale: 'en', messages })
 
 const family: FamilyCat[] = [
-  { name: 'Mingau', arrival: '2016', birth: '2014', sex: 'f' },
-  { name: 'Amora', arrival: '2017', birth: '2017', sex: 'f', momName: 'Mingau' },
+  { name: 'Nina', arrival: '2012', sex: 'f' },
+  { name: 'Valentina', arrival: '2013', birth: '2013', sex: 'f', momName: 'Nina' },
 ]
 
 const mountPanel = (cat: FamilyCat | null) =>
@@ -18,13 +18,13 @@ const mountPanel = (cat: FamilyCat | null) =>
 describe('TreeDetailPanel', () => {
   it('shows the cat name and arrival when open', () => {
     const w = mountPanel(family[1]!)
-    expect(w.text()).toContain('Amora')
-    expect(w.text()).toContain('Mingau')
+    expect(w.text()).toContain('Valentina')
+    expect(w.text()).toContain('Nina')
   })
 
   it('lists children for a mother', () => {
     const w = mountPanel(family[0]!)
-    expect(w.text()).toContain('Amora')
+    expect(w.text()).toContain('Valentina')
   })
 
   it('renders personality bars for a cat present in cats.ts', () => {

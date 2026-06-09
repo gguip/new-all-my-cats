@@ -38,7 +38,10 @@ const ptBR: typeof en = {
     ranzinza: 'Ranzinza',
     briguento: 'Briguento',
   },
-  cat: { photoTag: 'foto de {name}' },
+  cat: {
+    photoTag: 'foto de {name}',
+    memorial: 'Para sempre em nossos corações ★',
+  },
   team: {
     headStart: 'Conheça a ',
     headHighlight: 'Turma Toda',

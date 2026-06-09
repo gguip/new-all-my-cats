@@ -36,7 +36,10 @@ export default {
     ranzinza: 'Grumpy',
     briguento: 'Feisty',
   },
-  cat: { photoTag: 'photo of {name}' },
+  cat: {
+    photoTag: 'photo of {name}',
+    memorial: 'Forever in our hearts ★',
+  },
   team: {
     headStart: 'Meet the Whole ',
     headHighlight: 'Gang',
