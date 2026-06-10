@@ -17,35 +17,35 @@ export const ATTRS: Attr[] = [
 
 export const CATS: Cat[] = [
   // 2012
-  { name: 'Nina', fome: 70, brincalhao: 50, dorminhoco: 80, ranzinza: 40, briguento: 20 },
+  { name: 'Nina', fome: 40, brincalhao: 20, dorminhoco: 100, ranzinza: 0, briguento: 10 },
   // 2013 - filha da Nina
-  { name: 'Valentina', fome: 65, brincalhao: 60, dorminhoco: 75, ranzinza: 35, briguento: 25 },
+  { name: 'Valentina', fome: 75, brincalhao: 0, dorminhoco: 75, ranzinza: 95, briguento: 25 },
   // 2018
-  { name: 'Malu', fome: 80, brincalhao: 70, dorminhoco: 55, ranzinza: 30, briguento: 40 },
-  { name: 'Bisteca', fome: 95, brincalhao: 45, dorminhoco: 60, ranzinza: 50, briguento: 55, memorial: true },
+  { name: 'Malu', fome: 50, brincalhao: 40, dorminhoco: 70, ranzinza: 35, briguento: 25 },
+  { name: 'Bisteca', fome: 80, brincalhao: 45, dorminhoco: 60, ranzinza: 80, briguento: 55, memorial: true },
   // 2019
-  { name: 'Amarela', fome: 60, brincalhao: 75, dorminhoco: 65, ranzinza: 25, briguento: 30 },
-  { name: 'Preta', fome: 55, brincalhao: 40, dorminhoco: 70, ranzinza: 60, briguento: 45 },
-  { name: 'Branca', fome: 50, brincalhao: 55, dorminhoco: 72, ranzinza: 45, briguento: 35 },
-  { name: 'Narizinho', fome: 75, brincalhao: 65, dorminhoco: 50, ranzinza: 20, briguento: 25, memorial: true },
-  { name: 'Fumaça', fome: 85, brincalhao: 35, dorminhoco: 90, ranzinza: 55, briguento: 60, memorial: true },
+  { name: 'Amarela', fome: 30, brincalhao: 45, dorminhoco: 45, ranzinza: 55, briguento: 65 },
+  { name: 'Preta', fome: 65, brincalhao: 65, dorminhoco: 45, ranzinza: 75, briguento: 80 },
+  { name: 'Branca', fome: 70, brincalhao: 65, dorminhoco: 55, ranzinza: 75, briguento: 90 },
+  { name: 'Narizinho', fome: 60, brincalhao: 55, dorminhoco: 55, ranzinza: 60, briguento: 70, memorial: true },
+  { name: 'Fumaça', fome: 45, brincalhao: 60, dorminhoco: 40, ranzinza: 20, briguento: 15, memorial: true },
   // 2019 - filhos da Narizinho
-  { name: 'Theo', fome: 90, brincalhao: 85, dorminhoco: 40, ranzinza: 30, briguento: 50 },
-  { name: 'Pingo', fome: 70, brincalhao: 90, dorminhoco: 35, ranzinza: 15, briguento: 45 },
-  { name: 'Nevasca', fome: 55, brincalhao: 80, dorminhoco: 60, ranzinza: 25, briguento: 30 },
-  { name: 'Lily', fome: 60, brincalhao: 95, dorminhoco: 45, ranzinza: 10, briguento: 20, memorial: true },
+  { name: 'Theo', fome: 80, brincalhao: 20, dorminhoco: 50, ranzinza: 55, briguento: 80 },
+  { name: 'Pingo', fome: 35, brincalhao: 70, dorminhoco: 45, ranzinza: 30, briguento: 45 },
+  { name: 'Nevasca', fome: 80, brincalhao: 20, dorminhoco: 25, ranzinza: 80, briguento: 70 },
+  { name: 'Lily', fome: 55, brincalhao: 35, dorminhoco: 40, ranzinza: 55, briguento: 55, memorial: true },
   // 2021
-  { name: 'Salem', fome: 65, brincalhao: 50, dorminhoco: 55, ranzinza: 85, briguento: 70 },
-  { name: 'Lebron', fome: 88, brincalhao: 75, dorminhoco: 50, ranzinza: 35, briguento: 65, memorial: true },
-  { name: 'Bigode', fome: 72, brincalhao: 60, dorminhoco: 68, ranzinza: 40, briguento: 55 },
+  { name: 'Salem', fome: 55, brincalhao: 30, dorminhoco: 35, ranzinza: 100, briguento: 75 },
+  { name: 'Lebron', fome: 70, brincalhao: 55, dorminhoco: 45, ranzinza: 20, briguento: 30, memorial: true },
+  { name: 'Bigode', fome: 80, brincalhao: 55, dorminhoco: 20, ranzinza: 20, briguento: 20 },
   // 2021 - irmãos
-  { name: 'Cleiton', fome: 78, brincalhao: 55, dorminhoco: 62, ranzinza: 70, briguento: 75 },
-  { name: 'Maju', fome: 58, brincalhao: 88, dorminhoco: 48, ranzinza: 20, briguento: 35 },
-  { name: 'Manu', fome: 62, brincalhao: 82, dorminhoco: 52, ranzinza: 28, briguento: 40, memorial: true },
+  { name: 'Cleiton', fome: 100, brincalhao: 40, dorminhoco: 40, ranzinza: 60, briguento: 85 },
+  { name: 'Maju', fome: 65, brincalhao: 20, dorminhoco: 30, ranzinza: 60, briguento: 65 },
+  { name: 'Manu', fome: 55, brincalhao: 40, dorminhoco: 20, ranzinza: 55, briguento: 55, memorial: true },
   // 2022 - irmão da Preta e Branca
-  { name: 'Geraldo', fome: 68, brincalhao: 45, dorminhoco: 78, ranzinza: 65, briguento: 50 },
-  { name: 'Pedrita', fome: 55, brincalhao: 70, dorminhoco: 60, ranzinza: 30, briguento: 25 },
+  { name: 'Geraldo', fome: 20, brincalhao: 20, dorminhoco: 40, ranzinza: 60, briguento: 80 },
+  { name: 'Pedrita', fome: 60, brincalhao: 15, dorminhoco: 65, ranzinza: 20, briguento: 10 },
   // 2023
-  { name: 'Alice', fome: 60, brincalhao: 85, dorminhoco: 45, ranzinza: 15, briguento: 20 },
-  { name: 'Romeo', fome: 75, brincalhao: 80, dorminhoco: 50, ranzinza: 25, briguento: 45 },
+  { name: 'Alice', fome: 75, brincalhao: 45, dorminhoco: 35, ranzinza: 75, briguento: 85 },
+  { name: 'Romeo', fome: 65, brincalhao: 40, dorminhoco: 55, ranzinza: 60, briguento: 75 },
 ]
