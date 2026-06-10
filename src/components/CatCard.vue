@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 import { useI18n } from 'vue-i18n'
 import AttributeBar from './AttributeBar.vue'
 import AppPhoto from './AppPhoto.vue'
 import type { Cat, Attr } from 'src/data/cats'
+import { yearsHome, arrivalYearOf } from 'src/utils/yearsHome'
 
 const props = defineProps<{
   cat: Cat
@@ -14,6 +15,15 @@ const { t } = useI18n()
 // The typed `t` rejects dynamic/template-literal keys; loosen the signature for
 // the per-attribute label lookup and the parameterized photo tag.
 const td = t as unknown as (key: string, named?: Record<string, unknown>) => string
+
+const ageLabel = computed<string | null>(() => {
+  const arrival = arrivalYearOf(props.cat.name)
+  if (arrival === undefined) return null
+  const years = yearsHome(arrival, new Date().getFullYear())
+  if (years === 0) return td('cat.justArrived')
+  if (years === 1) return td('cat.yearHome', { count: 1 })
+  return td('cat.yearsHome', { count: years })
+})
 
 const root = ref<HTMLElement | null>(null)
 const live = ref(false)
@@ -57,6 +67,7 @@ onBeforeUnmount(cleanup)
     <h4>
       {{ props.cat.name }}
       <span v-if="props.cat.memorial" class="cat-card__star" :title="td('cat.memorial')">★</span>
+      <span v-if="ageLabel" class="cat-card__age">{{ ageLabel }}</span>
     </h4>
     <div class="cat-stats">
       <AttributeBar

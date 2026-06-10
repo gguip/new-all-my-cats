@@ -41,6 +41,9 @@ const es: typeof en = {
   cat: {
     photoTag: 'foto de {name}',
     memorial: 'Por siempre en nuestros corazones ★',
+    justArrived: 'recién llegado',
+    yearHome: '{count} año en casa',
+    yearsHome: '{count} años en casa',
   },
   team: {
     headStart: 'Conoce a la ',

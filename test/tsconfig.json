@@ -1,0 +1,5 @@
+{
+  "extends": "../.quasar/tsconfig.json",
+  "include": ["./**/*.ts", "../.quasar/shims-vue.d.ts"],
+  "exclude": ["../node_modules"]
+}

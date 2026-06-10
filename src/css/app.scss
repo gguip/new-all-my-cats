@@ -179,7 +179,7 @@ h1,h2,h3,h4,.disp{
 }
 .cat-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover);}
 .cat-card .photo{aspect-ratio:1/1;border-radius:16px;margin-bottom:13px;}
-.cat-card h4{font-size:var(--fs-card-title);margin-bottom:14px;display:flex;align-items:center;gap:8px;}
+.cat-card h4{font-size:var(--fs-card-title);margin-bottom:14px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
 .cat-card:nth-child(3n+2) h4{color:var(--orange);}
 .cat-card:nth-child(3n+1) h4,.cat-card:nth-child(3n) h4{color:var(--olive);}
 .cat-card h4::before{content:"";width:9px;height:9px;border-radius:50%;background:currentColor;opacity:.5;}
@@ -187,6 +187,7 @@ h1,h2,h3,h4,.disp{
 /* memorial cats */
 .cat-card--memorial{opacity:.85;}
 .cat-card__star{color:var(--orange);cursor:help;font-size:18px;}
+.cat-card__age{margin-left:auto;font-size:var(--fs-label);font-weight:400;color:var(--body);opacity:.65;white-space:nowrap;}
 .photo--memorial{filter:grayscale(1);opacity:.75;}
 
 .cat-stats{display:flex;flex-direction:column;gap:11px;}

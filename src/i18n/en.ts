@@ -39,6 +39,9 @@ export default {
   cat: {
     photoTag: 'photo of {name}',
     memorial: 'Forever in our hearts ★',
+    justArrived: 'just arrived',
+    yearHome: '{count} year with us',
+    yearsHome: '{count} years with us',
   },
   team: {
     headStart: 'Meet the Whole ',

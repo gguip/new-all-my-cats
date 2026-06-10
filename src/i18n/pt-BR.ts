@@ -41,6 +41,9 @@ const ptBR: typeof en = {
   cat: {
     photoTag: 'foto de {name}',
     memorial: 'Para sempre em nossos corações ★',
+    justArrived: 'recém-chegado',
+    yearHome: '{count} ano de casa',
+    yearsHome: '{count} anos de casa',
   },
   team: {
     headStart: 'Conheça a ',

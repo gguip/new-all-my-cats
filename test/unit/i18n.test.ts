@@ -25,6 +25,14 @@ describe('i18n messages', () => {
     locale.value = 'en'
     expect(t('cat.photoTag', { name: 'Mingau' })).toBe('photo of Mingau')
   })
+  it('builds the anos-de-casa label with a count param', () => {
+    locale.value = 'pt-BR'
+    expect(t('cat.yearHome', { count: 1 })).toBe('1 ano de casa')
+    expect(t('cat.yearsHome', { count: 14 })).toBe('14 anos de casa')
+    expect(t('cat.justArrived')).toBe('recém-chegado')
+    locale.value = 'en'
+    expect(t('cat.yearsHome', { count: 3 })).toBe('3 years with us')
+  })
   it('builds the litterOf label with a name param', () => {
     locale.value = 'pt-BR'
     expect(t('family.litterOf', { name: 'Mingau' })).toBe('filhos de Mingau')
