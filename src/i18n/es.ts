@@ -14,17 +14,17 @@ const es: typeof en = {
   lang: { pt: 'PT', en: 'EN', es: 'ES', ptFull: 'Português', enFull: 'English', esFull: 'Español' },
   hero: {
     title: 'Gatos. Caos. Mimos.',
-    sub: 'Dieciocho revoltosos peludos, una casa algo caótica — y nunca un regazo vacío.',
+    sub: 'Diecisiete revoltosos peludos, una casa algo caótica — y nunca un regazo vacío.',
     cta: 'Conoce a los Gatos',
   },
   welcome: {
     statementPre: 'Bienvenido al caos: ',
-    statementMid: 'dieciocho gatos, una casa y cero respeto por el espacio personal ',
+    statementMid: 'diecisiete gatos, una casa y cero respeto por el espacio personal ',
     statementEnd: '— y no lo cambiaríamos por nada.',
     doodle: 'miau',
     missionTitle: 'La idea es simple:',
     missionBody:
-      'Esta es la casa de dieciocho bobalicones rescatados, cada uno con una personalidad completamente ridícula — así que evaluamos a cada uno en las características que de verdad importan.',
+      'Esta es la casa de diecisiete bobalicones rescatados, cada uno con una personalidad completamente ridícula — así que evaluamos a cada uno en las características que de verdad importan.',
     features: [
       { label: 'Siestas al Sol', tag: 'gato durmiendo la siesta al sol' },
       { label: 'Un Poco de Caos', tag: 'gato tirando cosas' },
@@ -49,14 +49,14 @@ const es: typeof en = {
     headStart: 'Conoce a la ',
     headHighlight: 'Pandilla Entera',
     headEnd: '!',
-    sub: 'Los 18 — evaluados científicamente* en las características que más importan. (*no exactamente científico.)',
+    sub: 'Los 17 — evaluados científicamente* en las características que más importan. (*no exactamente científico.)',
   },
   support: {
     headPre: 'Comparte el ',
     headHl1: 'Amor',
     headMid: ': Ayuda a los Gatos que Aún ',
     headHl2: 'Esperan',
-    body: 'Estos dieciocho bobalicones se sacaron la lotería. Si quieres ayudar a los gatos que aún buscan a sus humanos, considera donar a un refugio cerca de ti — cada granito de arena cambia una vida.',
+    body: 'Estos diecisiete bobalicones se sacaron la lotería. Si quieres ayudar a los gatos que aún buscan a sus humanos, considera donar a un refugio cerca de ti — cada granito de arena cambia una vida.',
     cta: 'Apoya un Refugio',
     photoTag: 'uno de los rescatados, en brazos',
   },
@@ -66,7 +66,7 @@ const es: typeof en = {
     headHl2: 'Frecuentes',
     items: [
       {
-        q: '¿Cómo distingues a 18 gatos?',
+        q: '¿Cómo distingues a 17 gatos?',
         a: '¿Sinceramente? Por intuición, casi siempre. Con el tiempo cada uno tiene su forma de andar, su propio maullido y un rincón favorito para la siesta que lo delata al instante.',
       },
       {
@@ -75,10 +75,10 @@ const es: typeof en = {
       },
       {
         q: '¿Quién manda de verdad?',
-        a: 'Yo desde luego que no. Quien tiene el mayor puntaje de Gruñón suele dirigir la casa, y los otros diecisiete solo siguen la corriente.',
+        a: 'Yo desde luego que no. Quien tiene el mayor puntaje de Gruñón suele dirigir la casa, y los otros dieciséis solo siguen la corriente.',
       },
       {
-        q: '¿Qué es lo más difícil de tener 18 gatos?',
+        q: '¿Qué es lo más difícil de tener 17 gatos?',
         a: 'Aspirar. Y aceptar que cada laptop caliente, camisa limpia y caja abierta se convierte al instante en un gato.',
       },
       {
@@ -95,14 +95,14 @@ const es: typeof en = {
     headPre: 'Ven a ',
     headHl: 'Saludar',
     col1Title: 'La casa',
-    col1Body: '18 gatos · 1 humano muy cansado · unos 4kg de pelo barrido cada semana.',
+    col1Body: '17 gatos · 1 humano muy cansado · unos 4kg de pelo barrido cada semana.',
     col2Title: 'Dónde',
     col2Body: 'Un apartamento acogedor que, a estas alturas, es un 80% gato en volumen.',
     col3Title: 'Sigue el caos',
     col3Body: 'Siestas, zoomies y crímenes diarios — documentados al completo.',
   },
   footer: {
-    tagline: 'Dieciocho gatos. Una casa. Cero arrepentimientos.',
+    tagline: 'Diecisiete gatos. Una casa. Cero arrepentimientos.',
     copyright: '© 2026 Catastrophe — hecho con patas 🐾 & amor ♥️ por {author}',
   },
   family: {

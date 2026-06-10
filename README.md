@@ -1,6 +1,6 @@
 # 🐾 AllMyCats
 
-> Eighteen cats. One house. Zero regrets.
+> Seventeen cats. One house. Zero regrets.
 
 A playful single-page site for **Catastrophe** — a home full of cats. Built with Vue 3 + Quasar, it features a landing page and a scrolling family timeline of how the whole crew arrived, all in three languages.
 
