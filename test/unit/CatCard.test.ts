@@ -26,8 +26,10 @@ describe('CatCard', () => {
     expect(mountCard().findAll('.stat')).toHaveLength(5)
   })
 
-  it('uses the i18n photo tag with the cat name', () => {
-    expect(mountCard().get('.photo__tag').text()).toBe('foto de Mingau')
+  it('renders the cat photo with a name-based src and i18n alt', () => {
+    const img = mountCard().get('.photo img')
+    expect(img.attributes('src')).toBe('/cats/mingau.webp')
+    expect(img.attributes('alt')).toBe('foto de Mingau')
   })
 
   it('bars become live when the card intersects', async () => {

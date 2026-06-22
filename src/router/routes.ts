@@ -13,6 +13,15 @@ const routes: RouteRecordRaw[] = [
     children: [{ path: '', component: () => import('pages/FamilyTreePage.vue') }],
   },
 
+  ...(import.meta.env.DEV
+    ? [
+        {
+          path: '/studio',
+          component: () => import('pages/PhotoStudioPage.vue'),
+        },
+      ]
+    : []),
+
   // Always leave this as last one,
   // but you can also remove it
   {

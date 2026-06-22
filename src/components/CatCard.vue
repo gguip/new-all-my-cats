@@ -5,6 +5,7 @@ import AttributeBar from './AttributeBar.vue'
 import AppPhoto from './AppPhoto.vue'
 import type { Cat, Attr } from 'src/data/cats'
 import { yearsHome, arrivalYearOf } from 'src/utils/yearsHome'
+import { photoUrl } from 'src/utils/photoUrl'
 
 const props = defineProps<{
   cat: Cat
@@ -63,7 +64,11 @@ onBeforeUnmount(cleanup)
 
 <template>
   <div ref="root" class="cat-card" :class="{ 'cat-card--memorial': props.cat.memorial }">
-    <AppPhoto :label="td('cat.photoTag', { name: props.cat.name })" :cls="props.cat.memorial ? 'photo--memorial' : ''" />
+    <AppPhoto
+      :src="photoUrl(props.cat)"
+      :label="td('cat.photoTag', { name: props.cat.name })"
+      :cls="props.cat.memorial ? 'photo--memorial' : ''"
+    />
     <h4>
       {{ props.cat.name }}
       <span v-if="props.cat.memorial" class="cat-card__star" :title="td('cat.memorial')">★</span>
