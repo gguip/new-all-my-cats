@@ -27,4 +27,10 @@ describe('TimelineCard', () => {
     const w = mountCard({ selected: true })
     expect(w.attributes('aria-pressed')).toBe('true')
   })
+
+  it("renders the cat's standardized photo", () => {
+    const img = mountCard().find('.tcard__photo img')
+    expect(img.exists()).toBe(true)
+    expect(img.attributes('src')).toBe('/cats/mingau.webp')
+  })
 })
