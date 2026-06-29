@@ -58,6 +58,7 @@ const ptBR: typeof en = {
     headHl2: 'Esperam',
     body: 'Esses dezessete bobões tiraram a sorte grande. Se quiser ajudar os gatos que ainda procuram seus humanos, considere doar para um abrigo perto de você — cada ajuda muda uma vida.',
     cta: 'Apoie um Abrigo',
+    mapQuery: 'abrigo de gatos para adoção',
     photoTag: 'um dos resgatados, no colo',
   },
   faq: {

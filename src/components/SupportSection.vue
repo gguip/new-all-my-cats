@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import ScrollReveal from './ScrollReveal.vue'
 import BaseButton from './BaseButton.vue'
@@ -13,6 +14,11 @@ const heartStyle = (i: number) => ({
   transform: `rotate(${i * 12 - 20}deg)`,
   color: i % 2 ? 'var(--orange)' : 'var(--cream-text)',
 })
+
+const mapsUrl = computed(
+  () =>
+    `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(t('support.mapQuery'))}`,
+)
 </script>
 
 <template>
@@ -28,7 +34,7 @@ const heartStyle = (i: number) => ({
               {{ t('support.headPre') }}<span class="o">{{ t('support.headHl1') }}</span>{{ t('support.headMid') }}<span class="o">{{ t('support.headHl2') }}</span>
             </h2>
             <p>{{ t('support.body') }}</p>
-            <BaseButton href="#" @click.prevent>{{ t('support.cta') }}</BaseButton>
+            <BaseButton :href="mapsUrl" target="_blank" rel="noopener noreferrer">{{ t('support.cta') }}</BaseButton>
           </div>
           <AppPhoto cls="donate__photo" :label="t('support.photoTag')" />
         </div>

@@ -58,6 +58,7 @@ const es: typeof en = {
     headHl2: 'Esperan',
     body: 'Estos diecisiete bobalicones se sacaron la lotería. Si quieres ayudar a los gatos que aún buscan a sus humanos, considera donar a un refugio cerca de ti — cada granito de arena cambia una vida.',
     cta: 'Apoya un Refugio',
+    mapQuery: 'refugio de gatos adopción',
     photoTag: 'uno de los rescatados, en brazos',
   },
   faq: {

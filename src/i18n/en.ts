@@ -56,6 +56,7 @@ export default {
     headHl2: 'Waiting',
     body: "These seventeen goofballs hit the jackpot. If you'd like to help the cats still looking for their humans, consider donating to a shelter near you — every little bit changes a life.",
     cta: 'Support a Shelter',
+    mapQuery: 'cat shelter adoption',
     photoTag: 'one of the rescues, being held',
   },
   faq: {
