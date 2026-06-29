@@ -31,8 +31,8 @@ describe('WelcomeSection feature cards', () => {
     const videos = wrapper.findAll('video')
     expect(videos).toHaveLength(1)
     const sources = videos[0]!.findAll('source')
-    expect(sources[0]!.attributes('src')).toBe('/cats/sonecas.webm')
-    expect(sources[1]!.attributes('src')).toBe('/cats/sonecas.mp4')
+    expect(sources[0]!.attributes('src')).toBe('/cats/sonecas.webm#t=0.001')
+    expect(sources[1]!.attributes('src')).toBe('/cats/sonecas.mp4#t=0.001')
   })
 
   it('keeps placeholder tags for the other two cards', () => {

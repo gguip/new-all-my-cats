@@ -29,8 +29,10 @@ useAutoplayVideo(videoEl)
       preload="metadata"
       :aria-label="label"
     >
-      <source :src="webm" type="video/webm" />
-      <source :src="mp4" type="video/mp4" />
+      <!-- #t=0.001 nudges the browser to decode and paint the first frame as
+           the resting state; preload="metadata" alone does not paint one. -->
+      <source :src="`${webm}#t=0.001`" type="video/webm" />
+      <source :src="`${mp4}#t=0.001`" type="video/mp4" />
     </video>
   </div>
 </template>

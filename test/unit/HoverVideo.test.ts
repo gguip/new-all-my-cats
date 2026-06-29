@@ -30,13 +30,13 @@ function mountVideo() {
 }
 
 describe('HoverVideo', () => {
-  it('renders sources WebM first, then MP4', () => {
+  it('renders sources WebM first, then MP4, with a first-frame fragment', () => {
     const sources = mountVideo().findAll('source')
     expect(sources).toHaveLength(2)
     expect(sources[0]!.attributes('type')).toBe('video/webm')
-    expect(sources[0]!.attributes('src')).toBe('/cats/sonecas.webm')
+    expect(sources[0]!.attributes('src')).toBe('/cats/sonecas.webm#t=0.001')
     expect(sources[1]!.attributes('type')).toBe('video/mp4')
-    expect(sources[1]!.attributes('src')).toBe('/cats/sonecas.mp4')
+    expect(sources[1]!.attributes('src')).toBe('/cats/sonecas.mp4#t=0.001')
   })
 
   it('applies the cls to the photo frame and is a looping inline video', () => {
