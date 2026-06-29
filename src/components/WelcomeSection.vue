@@ -3,6 +3,7 @@ import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import ScrollReveal from './ScrollReveal.vue'
 import AppPhoto from './AppPhoto.vue'
+import HoverVideo from './HoverVideo.vue'
 import { PawPrint } from './Illustrations'
 
 const i18n = useI18n({ useScope: 'global' })
@@ -15,6 +16,11 @@ const scatter = [
   { x: '88%', y: '70%', r: -14, s: 30, c: 'var(--tan-2)', o: 0.5 },
 ]
 const featureCls = ['photo--sq', 'photo--wide', 'photo--wide']
+const featureVideos: ({ webm: string; mp4: string } | null)[] = [
+  { webm: '/cats/sonecas.webm', mp4: '/cats/sonecas.mp4' },
+  null,
+  null,
+]
 </script>
 
 <template>
@@ -46,7 +52,14 @@ const featureCls = ['photo--sq', 'photo--wide', 'photo--wide']
         <ScrollReveal v-for="(f, i) in features" :key="i">
           <div class="feature">
             <div class="feature__label">{{ f.label }}</div>
-            <AppPhoto :cls="featureCls[i] ?? ''" :label="f.tag" />
+            <HoverVideo
+              v-if="featureVideos[i]"
+              :webm="featureVideos[i]!.webm"
+              :mp4="featureVideos[i]!.mp4"
+              :cls="featureCls[i] ?? ''"
+              :label="f.tag"
+            />
+            <AppPhoto v-else :cls="featureCls[i] ?? ''" :label="f.tag" />
           </div>
         </ScrollReveal>
       </div>
